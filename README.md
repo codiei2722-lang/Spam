@@ -27,6 +27,8 @@
 ## 🔧 วิธีติดตั้ง
 
 ```bash
+pkg install git python python-pip 
+
 # 1. Clone โปรเจกต์
 git clone https://github.com/Thanwisut/Spam.git
 cd Spam
