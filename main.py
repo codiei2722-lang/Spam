@@ -451,7 +451,12 @@ def clean_phone_number(phone):
 def process_phone_with_api(phone, api_name, success_count):
     retry_delay = 5000  # 5000 วินาที
     current_time = time.time()
-
+    
+def clear_screen():
+    os.system("cls" if os.name == "nt" else "clear")
+# ลบข้อความทั้งหมด
+    clear_screen()
+    
     # อัพเดทสถานะ API
     with api_lock:
         if not api_status[api_name]["active"] and current_time >= api_status[api_name]["cooldown"]:
